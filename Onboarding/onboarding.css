@@ -232,7 +232,7 @@ button#toggle-password {
 }
 
 .auth-form .btn {
-    margin-top: var(--base-size-16);
+    margin-top: var(--base-size-2);
 }
 
 .btn-block {
@@ -437,4 +437,70 @@ display: none;
 #signin-button:hover {
     background-color: var(--primary-background-button-hover-color);
     border-color: var(--border-button-hover-color)
+}
+
+/* Estilização para a verficação de entrada dos dados para o email */
+
+#email-test {
+    position: relative;
+    display: inline-block;
+  }
+  
+#email-test span {
+    position: absolute;
+    left: 90%;
+    top: 33%;
+}
+
+input:user-valid {
+    border: 1px solid green;
+}
+
+input:user-valid + span::before {
+    color: green;
+}
+
+input:user-invalid + .error-message-email {
+    border-color: red;
+}
+input:user-invalid + span:before {
+    content: "✖";
+    color: red;
+}
+
+/* Mensagem de Erro */
+.error-message-email {
+    display: none;
+}
+
+input:invalid + span + .error-message-email{
+    display: block;
+  position: relative;
+  bottom: 10px;
+  margin-bottom: 4px;
+  color: red;
+}
+
+/* Estilização para a verficação de entrada dos dados para a senha */
+#password-test {
+    position:relative;
+    display: inline-block;
+}
+
+#password-test span {
+    position: absolute;
+    left: 90%;
+    top: 33%;
+}
+
+/* Estilização para a verficação de entrada dos dados para o nome do usuário */
+#username-test {
+    position: relative;
+    display: inline-block;
+}
+
+#username-test span {
+    position: absolute;
+    left: 90%;
+    top: 24.7%;
 }
