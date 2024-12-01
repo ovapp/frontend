@@ -1,4 +1,4 @@
-# opensource-website
+# ovapp-frontend
 
 Este é o repositório para o código aberto do site do OpenVoice.
 
