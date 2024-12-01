@@ -6,10 +6,10 @@
         <meta name="color-scheme" content="light dark">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/611306ea65.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="onboarding.css">
-        <link rel="icon" type="image/png" href="assets/PunctumNigrum.svg">
-        <script type="module" src="main.js"></script>
-    <title>OpenVoice</title>
+        <link rel="stylesheet" href="/Onboarding/onboarding.css">
+        <link rel="icon" type="image/png" href="/Onboarding/assets/PunctumNigrum.svg">
+        <script type="module" src="/Onboarding/main.js"></script>
+    <title>Cadastre-se | OpenVoice</title>
     
     <!-- Fonte Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -147,21 +147,28 @@
 
     <!-- Header com o nome da rede social -->
     <div class="auth-form-header p-0">
-        <h1 id="auth-header" style="font-size:24px">Entre no OpenVoice</h1>
+        <h1 id="auth-header" style="font-size:24px">Crie a sua conta</h1>
     </div>
 
     <!-- Formulário de Login -->
     <div class="auth-form-body mt-3">
         <form method="POST">
-            <label for="username" id="username-label" class="label">Nome de Usuário ou Email</label>
-            <input type="text" id="username" class="form-control input-block js-login-field" autocomplete="off" name="username" required>
+
+            <!-- Email -->
+            <label for="username" id="username-label" class="label">Digite o seu email</label>
+            <input type="text" id="username" class="form-control input-block js-login-field" autocomplete="email" name="username" required>
             
         <div class="position-relative">
-            <label for="password" id="password-label" class="label"">Senha</label>
-                <input type="password" id="current-password" class="form-control input-block js-login-field" autocomplete="current-password" name="password" required>
+
+            <!-- Senha -->
+            <label for="password" id="password-label" class="label"">Digite a sua senha</label>
+                <input type="password" id="current-password" class="form-control input-block js-login-field" autocomplete="new-password" name="password" required>
                 <button id="toggle-password" type="button" class="label-link position-absolute top-0 right-0" aria-label="Mostrar senha em texto. Aviso: Isso irá mostrar a sua senha na tela.">Mostrar senha</button>
 
-            <button id="login-button" class="btn btn-primary btn-block js-sign-in-button psw-btn" type="submit">Entrar</button>
+                <!-- Nome de Usuário -->
+                <label for="username" id="username-label" class="label">Digite o seu Nome de Usuário</label>
+                <input type="text" id="username" class="form-control input-block js-login-field" autocomplete="off" name="username" required>
+            <button id="login-button" class="btn btn-primary btn-block js-sign-in-button psw-btn" type="submit">Criar conta</button>
         </div>
         </form>
      </div>
@@ -169,9 +176,9 @@
     <!-- Alternativa para criar uma conta -->
     <div class="login-callout mt-3">
         <p id="create-account-paragraph" class="mt-1 mb-0 p-0">
-            Não tem uma conta?
-            <a id="rationem" href="#" class="create-account-text">
-                <strong id="rationem-text">Crie uma agora</strong>
+            Já tem uma conta?
+            <a id="rationem" href="/Onboarding/onboarding.html" class="create-account-text">
+                <strong id="rationem-text">Entre nela agora</strong>
             </a>
         </p>
     </div>
@@ -183,10 +190,10 @@
     <div class="footer container-lg p-responsive py-6 mt-6 f6 d-flex flex-justify-center flex-items-center flex-lg-row flex-wrap flex-lg-nowrap" role="contentinfo">
         <ul class="list-style-none d-flex flex-justify-center flex-wrap mb-2 mb-lg-0">
             <li class="mx-2">
-                <a id="about-us" class="Link--secondary Link" href="#">Sobre o OpenVoice</a>
+                <a id="about-us" class="Link--secondary Link" href="/Sobre nós/sobre-nos.html">Sobre o OpenVoice</a>
             </li>
             <li class="mx-2">
-                <a id="docs" class="Link--secondary Link" href="assets/Documentação_OpenVoice_Novembro2024.pdf" download="Documentação_OpenVoice_Novembro2024">Documentação</a>
+                <a id="docs" class="Link--secondary Link" href="/Onboarding/assets/Documentação_OpenVoice_Novembro2024.pdf" download="Documentação_OpenVoice_Novembro2024">Documentação</a>
             </li>
             <li class="mx-2">
                 <a id="repository" class="Link--secondary Link" href="https://github.com/VerbalThree/OpenVoice">Repositório no GitHub</a>
