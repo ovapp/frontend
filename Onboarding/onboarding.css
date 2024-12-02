@@ -464,19 +464,19 @@ input:user-invalid + .error-message-email {
     border-color: red;
 }
 input:user-invalid + span:before {
-    content: "✖";
     color: red;
 }
 
 /* Mensagem de Erro */
 .error-message-email {
     display: none;
+    font-size: var(--base-size-12);
 }
 
 input:invalid + span + .error-message-email{
     display: block;
   position: relative;
-  bottom: 10px;
+  bottom: 15px;
   margin-bottom: 4px;
   color: red;
 }

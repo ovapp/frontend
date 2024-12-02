@@ -38,3 +38,9 @@ async function checkPassword(password) {
         console.error(error);
     }
 }
+
+// reCAPTCHA 
+function onSubmit(token) {
+  document.getElementById("demo-form").submit();
+}
+

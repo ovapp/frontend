@@ -1,0 +1,8 @@
+/* Frase de contexto para telas menores */
+
+@media (min-width: 768px){
+    .AppHeader .AppHeader-globalBar .AppHeader-context
+    .AppHeader-context-compact{
+        display: none;
+    }
+}
