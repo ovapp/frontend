@@ -1,8 +1,116 @@
-/* Frase de contexto para telas menores */
+:root {
+    --base-size-64: 64px;
+    --base-size-40: 40px;
+    --base-size-32: 32px;
+    --base-size-24: 24px;
+    --base-size-16: 16px;
+    --base-size-12: 12px;
+    --base-size-8: 8px;
+    --base-size-4: 4px;
+    --base-size-2: 2px;
+    --borderWidth-thin: max(1px, 0.0625rem);
+    --h6-size: 12px;
+    --borderRadius-medium: 12px;
+    --borderRadius-small: 6px;
+    --borderRadius-large: 18px;
+    --brand-text-letterSpacing-1: 2.5rem;
+    --borderWidth-thin: max(1px, 0.0625rem);
+    --borderWidth-thick: max(2px, 0.125rem);
+    --borderWidth-thicker: max(4px, 0.25rem);
+}
 
-@media (min-width: 768px){
-    .AppHeader .AppHeader-globalBar .AppHeader-context
-    .AppHeader-context-compact{
-        display: none;
-    }
+:root {
+    --borderColor-default: #ADADAD;
+    --bgColor-inset: #ADADAD;
+}
+
+:root{
+    --base-text-weight-light: 300;
+    --base-text-weight-normal: 400;
+    --base-text-weight-medium: 500;
+    --base-text-weight-semibold: 600;
+    --text-title-weight-small: var(--base-text-weight-semibold);
+    --text-title-weight-medium: var(--base-text-weight-semibold);
+    --text-title-weight-large: var(--base-text-weight-semibold);    
+}
+
+:root {
+    --text-body-lineHeight-small: 1.6666;
+    --text-body-lineHeight-medium: 1.4285;
+    --text-body-lineHeight-large: 1.5;
+}
+
+:root {
+    --control-medium-size: 2rem;
+    --control-medium-lineBoxHeight: 1.25rem;
+    --control-medium-paddingBlock: 0.375rem;
+    --control-medium-paddingInLine-condensed: 0.5rem;
+    --control-medium-paddingInLine-normal: 0.75rem;
+    --control-medium-paddingInLine-spacious: 1rem;
+}
+
+:root {
+    --control-minTarget-auto: 1rem;
+    --controlStack-small-gap-auto: 0.5rem;
+    --controlStack-medium-gap-auto: 0.5rem;
+}
+
+:root {
+    --brand-text-letterSpacing-2: 0.05rem;
+}
+
+:root {
+    color-scheme: light dark;
+    --primary-color: light-dark(#FFFFFF, #333);
+    --primary-background: light-dark(#F7F7F7,#1C222A);
+    --primary-background-button-hover-color: light-dark(#898989, #086301);
+    --highlight-color: light-dark(#1586ff, #2b802b);
+    --text-color: light-dark(#000000, #FFFFFF);
+    --border-color: light-dark(#ADADAD, #4A4C4F);
+    --link-hover: light-dark(#ccc,#877777);
+    --button-border-color: light-dark(#1586ff, lime);
+    --background-hover-color: light-dark(#0b5ed7,);
+    --border-hover-color: light-dark(#0a58ca,);
+}
+
+:root{
+    --primary-background-button-color: light-dark(#000000, #2b802b);
+    --primary-background-button-hover-color: light-dark(#898989, #086301);
+    --border-button-hover-color: light-dark(#898989, #086301);
+
+}
+
+:root{
+    &:has(input[name="color-scheme"][value="light dark"]:checked){ color-scheme: light dark;}
+    &:has(input[name="color-scheme"][value="light"]:checked){ color-scheme: light;}
+    &:has(input[name="color-scheme"][value="dark"]:checked){ color-scheme: dark;}
+}
+
+* {
+    font-family: inter;
+}
+
+body, html {
+    margin: 0;
+    height: 100%;
+    font-family: inter;
+    background-color: var(--primary-color);
+}
+
+.inter{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+.source-serif-4 {
+    font-family: "Source Serif 4", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.navigation-bar {
+    background-color: #D9D9D9;
+    border: 1px solid var(--border-color);
+    border-radius: var(--borderRadius-medium);
 }
