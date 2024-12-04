@@ -1,4 +1,4 @@
-# ovapp-frontend
+# OpenVoice Frontend <a href="#versão"><img alt="Static Badge" src="https://img.shields.io/badge/Vers%C3%A3o-1.0.0-c6c6c6"></a>
 
 Este é o repositório para o código aberto do site do OpenVoice.
 
