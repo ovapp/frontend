@@ -124,6 +124,10 @@ body, html {
     border-radius: var(--borderRadius-medium);
 }
 
+#AppHeader {
+    transition: top 0.3s; /* Transição do sliding (cima e baixo) */
+}
+
 /* Barra de navegação inteira */
 #entire-navbar {
     height: var(--height-size-56, 56px) !important;
