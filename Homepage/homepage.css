@@ -80,6 +80,11 @@
 
 }
 
+:root {
+    --height-size-56: 56px;
+    --width-size-1185: 1185px;
+}
+
 :root{
     &:has(input[name="color-scheme"][value="light dark"]:checked){ color-scheme: light dark;}
     &:has(input[name="color-scheme"][value="light"]:checked){ color-scheme: light;}
@@ -109,8 +114,81 @@ body, html {
     font-style: normal;
 }
 
+/* Barra de navegação inteira */
 .navigation-bar {
     background-color: #D9D9D9;
     border: 1px solid var(--border-color);
     border-radius: var(--borderRadius-medium);
+}
+
+/* Barra de navegação inteira */
+#entire-navbar {
+    height: var(--height-size-56, 56px) !important;
+    width: var(--width-size-1185, 1185px) !important;
+}
+
+/* Botões da barra de navegação */
+#navbar-buttons button {
+    margin-right: 5px;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+/* Input de pesquisa */
+#search-input {
+    border: 1px solid var(--border-color);
+    width: 220px;
+  height: 30px;
+  line-height: 18px;
+  outline: none;
+  transition: width 0.3s cubic-bezier(1,0,0,1), transform 0.3s ease, border-color 0.3s ease;
+  transform-origin: center;
+  padding: 6px 6px 6px 30px; /* Espaço para o icone */
+}
+
+#search-input:hover {
+    transform: scale(0.88);
+    border-color: black;
+}
+
+  #search-input:focus {
+    width: 300px;
+    transform: scale(1);
+    margin-right: 300px;
+}
+
+#search-container i {
+    position: absolute;
+    left: 44%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: var(--base-size-16);
+    color: #BABABA;
+    pointer-events: none;
+    opacity: 1;
+    transition: transform 0.3s ease, left 0.3s ease, top 0.3s ease, opacity 0.3s ease;
+}
+
+#search-container:hover i {
+    transform: scale(0.55);
+    left: 45%;
+  top: 25px;
+    opacity: 0;
+    transition: transform 0.3s ease, left 0.3s ease, top 0.3s ease, opacity 0.3s ease;
+}
+
+#search-container:focus ~i {
+    transform: translateY(-50%);
+    left: 10px;
+    top: 50%;
+    opacity: 1;
+    transition: transform 0.3s ease, left 0.3s ease, top 0.3s ease, opacity 0.3s ease;
+}
+
+#search-input:focus ~ i{ 
+ transform: translateY(-50%);
+ left: 42%;
+ top: 50%;
+ opacity: 1;
+ transition: transform 0.3s ease, left 0.3s ease, top 0.3s ease, opacity 0.3s ease;
 }
