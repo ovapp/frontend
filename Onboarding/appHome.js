@@ -1,6 +1,6 @@
-import {install} from '@github/hotkey'
+document.addEventListener('DOMContentLoaded', function() {
 
-// Install all the hotkeys on the page
-for (const el of document.querySelectorAll('[data-hotkey]')) {
-  install(el)
-}
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+  
+  });
