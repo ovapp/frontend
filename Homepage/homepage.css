@@ -4,7 +4,9 @@
     --base-size-32: 32px;
     --base-size-24: 24px;
     --base-size-16: 16px;
+    --base-size-14: 14px;
     --base-size-12: 12px;
+    --base-size-10: 10px;
     --base-size-8: 8px;
     --base-size-4: 4px;
     --base-size-2: 2px;
@@ -71,6 +73,7 @@
     --button-border-color: light-dark(#1586ff, lime);
     --background-hover-color: light-dark(#0b5ed7,);
     --border-hover-color: light-dark(#0a58ca,);
+    --tooltip-color: light-dark(#555, #555);
 }
 
 :root{
@@ -121,6 +124,10 @@ body, html {
     border-radius: var(--borderRadius-medium);
 }
 
+#AppHeader {
+    transition: top 0.3s; /* Transição do sliding (cima e baixo) */
+}
+
 /* Barra de navegação inteira */
 #entire-navbar {
     height: var(--height-size-56, 56px) !important;
@@ -159,7 +166,7 @@ body, html {
 
 #search-container i {
     position: absolute;
-    left: 44%;
+    left: 44.8%;
     top: 50%;
     transform: translateY(-50%);
     font-size: var(--base-size-16);
@@ -187,8 +194,81 @@ body, html {
 
 #search-input:focus ~ i{ 
  transform: translateY(-50%);
- left: 42%;
+ left: 42.7%;
  top: 50%;
  opacity: 1;
  transition: transform 0.3s ease, left 0.3s ease, top 0.3s ease, opacity 0.3s ease;
+}
+
+/* Logo na navbar */
+.navbar-brand {
+    padding-top: var(--bs-navbar-brand-padding-y);
+    padding-bottom: var(--base-size-8, 8px);
+    margin-right: var(--bs-navbar-brand-margin-end);
+    font-size: var(--bs-navbar-brand-font-size);
+    color: var(--text-color);
+    text-decoration: none;
+    white-space: nowrap;
+    margin-left: var(--base-size-10, 10px);
+}
+
+/* Frase de contexto na navbar */
+#context-text {
+    color: var(--text-color);
+    text-decoration: none !important;
+    font-size: var(--base-size-14, 14px);
+}
+
+/* Classe da tooltip */
+.custom-tooltip {
+    --bs-tooltip-bg: var(--tooltip-color);
+    background-color: var(--tooltip-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--borderRadius-small);
+    color: var(--text-color);
+    padding: 2px 2px 2px 2px;
+    bottom: 125%;
+    margin-left: -60px;
+    transition: opacity 0.35s;
+    opacity: 0;
+}
+
+.top-50 {
+    top: 10% !important;
+}
+
+/* Divisão da barra de navegação */
+#create-post {
+    border: 1px solid #ADADAD;
+    width: 573px;
+    height: 65px;
+    background-color: #D9D9D9;
+}
+
+/* Botão para criar a postagem */
+#post-input {
+    width: 500px;
+    height: 30px;
+    margin: 15px 0 15px 0;
+    background-color: #FFFFFF;
+    border: 1px solid #ADADAD;
+    border-radius: 1px;
+    font-size: 12px;
+  border-radius: 7px;
+  cursor: text;
+}
+
+/* Parágrafo dentro do botão */
+#post-input p {
+    left: 14%;
+    position: absolute;
+    top: 20px;
+}
+
+/* Foto do usuário */
+.avatar {
+    border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
 }
