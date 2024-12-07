@@ -14,11 +14,17 @@
     --borderRadius-medium: 12px;
     --borderRadius-small: 6px;
     --borderRadius-large: 18px;
-    --brand-text-letterSpacing-1: 2.5rem;
 }
 
 :root {
     --brand-text-letterSpacing-2: 0.05rem;
+    --brand-text-letterSpacing-1: 2.5rem;
+    --brand-text-letterSpacing-3: 3rem;
+    --brand-text-letterSpacing-4: 3.5rem;
+    --brand-text-letterSpacing-5: 4rem;
+    --brand-text-letterSpacing-6: 4.5rem;
+    --brand-text-letterSpacing-7: 5rem;
+    --brand-text-letterSpacing-8: 5.5rem;
 }
 
 :root {
@@ -289,7 +295,7 @@ button#toggle-password {
     }
 }
 
-@media (min-width> 1012px){
+@media (min-width: 1012px){
     .flex-lg-row {
         flex-direction: row !important;
     }
@@ -406,22 +412,15 @@ display: none;
     box-sizing: border-box;
 }
 
+/* Texto do Sobre Nós */
 .about-us-heading {
     grid-column: 1 / -1;
     grid-row: heading;
     text-align: center;
     font-size: var(--base-size-32);
-    line-height: var(--brand-text-letterSpacing-1);
+    line-height: var(--brand-text-letterSpacing-4);
     letter-spacing: var( --brand-text-letterSpacing-2);
     color: var(--text-color);
-}
-
-@media (max-width: 1011px) {
-    .about-us-heading {
-        font-size: 1.08em;
-        line-height: 1.5em;
-        letter-spacing: 0.001em;
-    }
 }
 
 /* Botão para entrar na conta do Sobre Nós */
@@ -444,8 +443,8 @@ display: none;
 #email-test {
     position: relative;
     display: inline-block;
-  }
-  
+}
+
 input:user-valid {
     border: 1px solid green;
 }
@@ -474,10 +473,10 @@ input:user-invalid + p:before {
 
 input:invalid + .error-message-email{
     display: block;
-  position: relative;
-  bottom: 15px;
-  margin-bottom: 4px;
-  color: red;
+    position: relative;
+    bottom: 15px;
+    margin-bottom: 4px;
+    color: red;
 }
 
 /* Estilização para a verficação de entrada dos dados para a senha */
@@ -496,4 +495,48 @@ input:invalid + .error-message-email{
 #provider-button {
     background-color: white;
     background-image: linear-gradient(white, #a8a8a8);
+}
+
+p {
+    grid-column: 1 / -1;
+    grid-row: heading;
+    text-align: center;
+    font-size: var(--base-size-24);
+    line-height: 0.8rem;
+    letter-spacing: var(--brand-text-letterSpacing-2);
+    color: var(--text-color);
+}
+
+@media (max-width: 1011px){
+    p {
+    grid-column: 1 / -1;
+    grid-row: heading;
+    text-align: center;
+    font-size: 12px;
+    line-height: 0.05em;
+    letter-spacing: 0.05em;
+    color: var(--text-color);
+    }
+}
+
+.erros {
+    grid-column: 1 / -1;
+    grid-row: heading;
+    text-align: center;
+    font-size: var(--base-size-24);
+    line-height: 2rem;
+    letter-spacing: var(--brand-text-letterSpacing-2);
+    color: var(--text-color);
+}
+
+@media (max-width: 1011px){
+    .erros {
+    grid-column: 1 / -1;
+    grid-row: heading;
+    text-align: center;
+    font-size: var(--base-size-24);
+    line-height: 3rem;
+    letter-spacing: 0.05rem;
+    color: var(--text-color);
+    }
 }

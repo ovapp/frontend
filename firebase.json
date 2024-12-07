@@ -4,26 +4,39 @@
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**"
+      "**/node_modules/**",
+      "**/Homepage**",
+      "**/Criando a Conta**",
+      "**/Onboarding**",
+      "**/Sobre Nós**",
+      "**/404**",
+      "LICENSE**",
+      "package-log.json",
+      "package.json",
+      "**README.md",
+      "yarn.lock"
     ],
-    "rewrites": [
-      {
-        "source": "/",
-        "destination": "/homepage.html" 
-      },
-      {
-        "source": "/login",
-        "destination": "/onboarding.html"
-      },
-      {
-        "source": "/signup",
-        "destination": "/signup.html"
-      },
-      {
-        "source": "**",
-        "destination": "/404.html"
-      }
-    ]
+    "redirects": [{
+      "source": "/about-us",
+      "destination": "/sobre-nos.html",
+      "type": 200
+    }, {
+      "source": "/sobre-nos",
+      "destination": "/sobre-nos.html",
+      "type": 200
+    }, {
+      "source": "/sobre-nosotros",
+      "destination": "/sobre-nos.html",
+      "type": 200
+    }, {
+      "source": "/about",
+      "destination": "/sobre-nos.html",
+      "type": 200
+    }],
+    "rewrites": [{
+      "source": "**",
+      "destination": "/404.html"
+    }]
   },
   "emulators": {
     "hosting": {
