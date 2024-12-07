@@ -4,17 +4,7 @@
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**",
-      "**/Homepage**",
-      "**/Criando a Conta**",
-      "**/Onboarding**",
-      "**/Sobre Nós**",
-      "**/404**",
-      "LICENSE**",
-      "package-log.json",
-      "package.json",
-      "**README.md",
-      "yarn.lock"
+      "**/node_modules/**"
     ],
     "redirects": [{
       "source": "/about-us",
