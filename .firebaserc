@@ -1,7 +1,6 @@
 {
   "projects": {
-    "default": "openvoice-823aa",
-    "openvoice": "openvoice-a4d3a"
+    "default": "openvoice-a4d3a"
   },
   "targets": {},
   "etags": {}
