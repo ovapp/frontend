@@ -16,8 +16,6 @@ function applyLocalization(locale){
     document.getElementById('signin-button').innerText = translation.button;
     document.getElementById('docs').innerText = translation.docs;
     document.getElementById('copyright').innerText = translation.copyright;    
-    document.getElementById('error-line').innerText = translation.errorLine;
-    document.getElementById('invite').innerText = translation.invite;
     document.documentElement.lang = locale;
 }
 

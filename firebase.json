@@ -14,37 +14,32 @@
       "package-log.json",
       "package.json",
       "**README.md",
-      "yarn.lock",
-      "PunctumNigrum.svg",
-      "onboarding.css",
-      "main404.js",
-      "mainAbout.js",
-      "/public/translations"
+      "yarn.lock"
     ],
     "redirects": [{
       "source": "/about-us",
       "destination": "/sobre-nos.html",
-      "type": 200
+      "type": 301
     }, {
       "source": "/sobre-nos",
       "destination": "/sobre-nos.html",
-      "type": 200
+      "type": 301
     }, {
       "source": "/",
       "destination": "/sobre-nos.html",
-      "type": 200
+      "type": 301
     },  {
       "source": "/sobre",
       "destination": "/sobre-nos.html",
-      "type": 200
+      "type": 301
     }, {
       "source": "/sobre-nosotros",
       "destination": "/sobre-nos.html",
-      "type": 200
+      "type": 301
     }, {
       "source": "/about",
       "destination": "/sobre-nos.html",
-      "type": 200
+      "type": 301
     }],
     "rewrites": [{
       "source": "**",
