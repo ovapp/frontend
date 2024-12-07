@@ -14,7 +14,12 @@
       "package-log.json",
       "package.json",
       "**README.md",
-      "yarn.lock"
+      "yarn.lock",
+      "PunctumNigrum.svg",
+      "onboarding.css",
+      "main404.js",
+      "mainAbout.js",
+      "/public/translations"
     ],
     "redirects": [{
       "source": "/about-us",
@@ -22,6 +27,14 @@
       "type": 200
     }, {
       "source": "/sobre-nos",
+      "destination": "/sobre-nos.html",
+      "type": 200
+    }, {
+      "source": "/",
+      "destination": "/sobre-nos.html",
+      "type": 200
+    },  {
+      "source": "/sobre",
       "destination": "/sobre-nos.html",
       "type": 200
     }, {
@@ -36,6 +49,18 @@
     "rewrites": [{
       "source": "**",
       "destination": "/404.html"
+    }, {
+      "source": "/404",
+      "destination": "/404.html"
+    }, {
+      "source": "sobre-nos.html",
+      "destination": "/sobre-nos.html"
+    }, {
+      "source": "404.html",
+      "destination": "/404.html"
+    }, {
+      "source": "sobre.html",
+      "destination": "/sobre-nos.html"
     }]
   },
   "emulators": {
