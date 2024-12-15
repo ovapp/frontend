@@ -1,5 +1,18 @@
 {
   "projects": {
     "default": "openvoice-a4d3a"
-  }
+  },
+  "targets": {
+    "openvoice-a4d3a": {
+      "hosting": {
+        "main-site": [
+          "openvoice-a4d3a"
+        ],
+        "about-site": [
+          "about-site"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

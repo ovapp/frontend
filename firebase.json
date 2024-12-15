@@ -1,60 +1,26 @@
 {
-  "hosting": {
-    "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "redirects": [{
-      "source": "/about-us",
-      "destination": "/sobre-nos.html",
-      "type": 301
-    }, {
-      "source": "/sobre-nos",
-      "destination": "/sobre-nos.html",
-      "type": 301
-    }, {
-      "source": "/",
-      "destination": "/sobre-nos.html",
-      "type": 301
-    },  {
-      "source": "/sobre",
-      "destination": "/sobre-nos.html",
-      "type": 301
-    }, {
-      "source": "/sobre-nosotros",
-      "destination": "/sobre-nos.html",
-      "type": 301
-    }, {
-      "source": "/about",
-      "destination": "/sobre-nos.html",
-      "type": 301
-    }],
-    "rewrites": [{
-      "source": "**",
-      "destination": "/404.html"
-    }, {
-      "source": "/404",
-      "destination": "/404.html"
-    }, {
-      "source": "sobre-nos.html",
-      "destination": "/sobre-nos.html"
-    }, {
-      "source": "404.html",
-      "destination": "/404.html"
-    }, {
-      "source": "sobre.html",
-      "destination": "/sobre-nos.html"
-    }]
-  },
-  "emulators": {
-    "hosting": {
-      "port": 5000
+  "hosting": [
+    {
+      "target": "main-site",
+      "public": "main-site",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "redirects": [
+        {"source": "**", "destination": "https://about.ovapp.online", "type": 301}
+      ],
+      "headers": [
+        {"source": "/404.html", "headers": [{"key": "Cache-control", "value": "no-cache"}] }
+      ]
     },
-    "ui": {
-      "enabled": true
-    },
-    "singleProjectMode": true
-  }
+    {
+      "target": "about-site",
+      "public": "about-site",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "redirects": [
+        {"source": "**", "destination": "/sobre-nos.html", "type": 301}
+      ],
+      "rewrites": [
+        {"source": "**", "destination": "/sobre-nos.html"}
+      ]
+    }
+  ]
 }
